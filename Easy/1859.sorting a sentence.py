@@ -1,4 +1,4 @@
-this 
+
 class Solution:
     def sortSentence(self, s: str) -> str:
         s=s.split(' ')
