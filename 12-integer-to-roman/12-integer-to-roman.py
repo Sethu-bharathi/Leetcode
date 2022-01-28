@@ -1,14 +1,14 @@
 class Solution:
     def intToRoman(self, num: int) -> str:
         d={1000: 'M', 900: 'CM', 500: 'D', 400: 'CD', 100: 'C', 90: 'XC', 50: 'L', 40: 'XL', 10: 'X', 9: 'IX', 5: 'V', 4: 'IV', 1: 'I'}
-        res=""
+        res=[]
         for i in d:
             quo,num=divmod(num,i)
             if quo>0:
-                res+=quo*d[i]
+                res.append(quo*d[i])
             if num==0:
                 break
-        return res
+        return "".join(res)
                 
 
             
