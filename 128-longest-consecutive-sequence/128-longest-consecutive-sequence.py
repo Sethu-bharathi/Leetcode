@@ -1,7 +1,9 @@
 class Solution:
     def longestConsecutive(self, nums):
         longest_streak = 0
-        num_set = set(nums)
+        num_set = {}
+        for i in nums:
+            num_set[i]=1
 
         for num in num_set:
             if num - 1 not in num_set:
