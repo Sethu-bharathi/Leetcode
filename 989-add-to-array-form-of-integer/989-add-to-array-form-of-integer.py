@@ -4,6 +4,8 @@ class Solution:
             k+=nums[i]
             nums[i]=k%10
             k//=10
+            if not k:
+                break
         while k:
             nums=[k%10]+nums
             k//=10
