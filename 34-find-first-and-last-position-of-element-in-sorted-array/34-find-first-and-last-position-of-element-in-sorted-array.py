@@ -15,10 +15,7 @@ class Solution:
                 res.append(mid)
                 break
             else:
-                if r==mid:
-                    r=mid-1
-                else:
-                    r=mid
+                r=mid-1
         if not res:
             return [-1,-1]
         l=0
@@ -34,6 +31,6 @@ class Solution:
                 res.append(mid)
                 break
             else:
-                l=mid
+                l=mid+1
         return res
         
