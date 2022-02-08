@@ -14,7 +14,6 @@ class Solution:
         re=0
         while count<n//2:
             count-=heapq.heappop(arr)
-            print(count,n)
             re+=1
         return re
         
