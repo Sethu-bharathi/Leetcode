@@ -18,7 +18,7 @@ class Solution:
                 r=mid-1
         if not res:
             return [-1,-1]
-        l=0
+        l=res[0]
         r=len(nums)-1
         n=len(nums)
         while l<=r:
