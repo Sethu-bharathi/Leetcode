@@ -3,18 +3,27 @@ class Solution:
         n1, n2 = len(s1), len(s2)
         if n1 > n2:
             return False
-        chars1, chars2 = {}, {}
+        d1={}
+        d2={}
         for i in range(n1):
-            chars1[s1[i]] = 1 if s1[i] not in chars1 else chars1[s1[i]] + 1
-        for i in range(n2):
-            chars2[s2[i]] = 1 if s2[i] not in chars2 else chars2[s2[i]] + 1
-            if i >= n1:
-                if chars2[s2[i - n1]] > 1:
-                    chars2[s2[i - n1]] -= 1
-                else:
-                    del chars2[s2[i - n1]]
-            if chars1 == chars2:
-                return True
-        return False
-            
+            if s1[i] in d1:
+                d1[s1[i]]+=1
+            else:
+                d1[s1[i]]=1
+            if s2[i] in d2:
+                d2[s2[i]]+=1
+            else:
+                d2[s2[i]]=1
+        for i in range(n1,n2):
+            if d1==d2:
+                return 1
+            if s2[i] in d2:
+                d2[s2[i]]+=1
+            else:
+                d2[s2[i]]=1
+            if d2[s2[i-n1]]==1:
+                del d2[s2[i-n1]]
+            else:
+                d2[s2[i-n1]]-=1
+        return d1==d2
             
