@@ -6,14 +6,10 @@ class Solution:
                 d[i]+=1
             else:
                 d[i]=1
-        count,flag=0,0
+        count=0
         for i in d:
-            if d[i]%2==0:
-                count+=d[i]
-            else:
-                if flag:
-                    count+=d[i]-1
-                else:
-                    flag=1
-                    count+=d[i]
+            num=d[i]
+            count+=(num//2)*2
+            if count%2==0 and num%2:
+                count+=1
         return count
