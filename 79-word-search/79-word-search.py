@@ -23,6 +23,6 @@ class Solution:
             return 0
         for i in range(R):
             for j in range(C):
-                if dfs(i,j,0):
+                if board[i][j]==word[0] and dfs(i,j,0):
                     return True
         return False
