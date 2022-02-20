@@ -1,10 +1,9 @@
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         R,C=len(board),len(board[0])
-        fn=len
         def dfs(i,j,index):
             temp=board[i][j]
-            if index==fn(word)-1 and word[index]==board[i][j]:
+            if index==len(word)-1 and word[index]==board[i][j]:
                 return 1
             elif word[index]==board[i][j]:
                 temp,board[i][j]=board[i][j],"*"
