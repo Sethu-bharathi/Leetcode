@@ -11,10 +11,5 @@ class Solution:
                 res=i
                 count=1
         count=1
-        for i in nums:
-            if i==res:
-                count+=1
-        if count>(len(nums)>>1):
-            return res
-        return -1
+        return res
                 
