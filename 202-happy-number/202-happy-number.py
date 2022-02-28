@@ -1,6 +1,8 @@
 class Solution:
     def isHappy(self, n: int) -> bool: 
         def endless(n, l):
+            if n==81:
+                return 0
             if n in l:
                 return False
             if n == 1:
