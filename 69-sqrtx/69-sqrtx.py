@@ -1,7 +1,7 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
-        if x==1:
-            return 1
+        if x<2:
+            return x
         start=2
         end=x>>1
         while start<=end:
