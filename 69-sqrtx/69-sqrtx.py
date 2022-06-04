@@ -5,7 +5,7 @@ class Solution:
         start=2
         end=x>>1
         while start<=end:
-            mid=(start)-((start-end)//2)
+            mid=(start)-((start-end)>>2)
             if mid*mid==x:
                 return mid
             elif mid*mid>x:
