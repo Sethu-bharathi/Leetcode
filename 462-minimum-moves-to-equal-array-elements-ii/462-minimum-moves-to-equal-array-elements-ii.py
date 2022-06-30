@@ -3,6 +3,6 @@ class Solution:
         nums.sort()
         median=nums[len(nums)>>1]
         count=0
-        for i in nums:
-            count+=abs(i-median)
+        for i in range(len(nums)):
+            count+=abs(nums[i]-median)
         return count
