@@ -5,6 +5,6 @@ class Solution:
         for i in d:
             num=d[i]
             count+=(num>>1)<<1
-            if num%2 and not count%2:
+            if num&1 and not count&1:
                 count+=1
         return count
